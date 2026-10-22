@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jungle Dash — Endless Runner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">ENDLESS RUNNER</p>
+        <h1>Jungle Dash</h1>
+      </div>
+      <button id="pauseBtn" class="icon-btn" aria-label="Pause game" title="Pause (P)">Ⅱ</button>
+    </header>
+
+    <section class="game-wrap" aria-label="Game area">
+      <canvas id="game" width="900" height="600" aria-label="Jungle Dash game canvas"></canvas>
+      <div class="hud">
+        <div class="hud-card"><span> DISTANCE</span><strong id="score">0</strong></div>
+        <div class="hud-card coin-card"><span>COINS</span><strong id="coins">0</strong></div>
+        <div class="hud-card"><span>BEST</span><strong id="best">0</strong></div>
+      </div>
+      <div id="overlay" class="overlay">
+        <div class="overlay-panel">
+          <p class="eyebrow">READY, RUNNER?</p>
+          <h2 id="overlayTitle">Jungle Dash</h2>
+          <p id="overlayText">Dodge the obstacles, collect coins, and see how far you can run.</p>
+          <button id="startBtn" class="primary-btn">Start running</button>
+          <p class="small-help">← → move · ↑ / Space jump · ↓ slide · P pause</p>
+        </div>
+      </div>
+      <div id="pauseLabel" class="pause-label hidden">PAUSED</div>
+    </section>
+
+    <nav class="touch-controls" aria-label="Touch controls">
+      <button data-action="left" aria-label="Move left">←</button>
+      <button data-action="jump" aria-label="Jump">↑ <small>JUMP</small></button>
+      <button data-action="slide" aria-label="Slide">↓ <small>SLIDE</small></button>
+      <button data-action="right" aria-label="Move right">→</button>
+    </nav>
+    <footer>
+      <span>Built with HTML, CSS and JavaScript</span>
+      <span>Collect coins. Avoid obstacles. Keep running.</span>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
